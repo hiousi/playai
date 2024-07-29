@@ -30,7 +30,7 @@ for m in st.session_state.messages:
          st.chat_message(m["role"]).markdown(m["content"])
 
 # React to user input
-if prompt := st.chat_input("Your message"):
+if prompt := st.chat_input("Ton message"):
     if not st.session_state.openai_api_key.startswith('sk-'):
         st.warning(f"Tu as besoin d'une clef API !", icon='⚠')
     else:
