@@ -14,7 +14,7 @@ st.title(":material/mail: FlemAI")
 st.markdown("**F**aciliter **L**'**E**nvoi et le **M**anagement d'**E**mails par **I**ntelligence **A**rtificielle.")
 st.markdown(""">    Entraîné pour être poli et serviable, je ne vais pas forcement répondre à ce qu'on te demande, mais
                     je vais ajouter des fioritures sémantiques et du blabla de courtoisie.
-                    Tes réponses ne servirons toujours à rien, mais au moins, elles seront très appréciés.""")
+                    Tes réponses ne servirons toujours à rien, mais au moins, elles seront très appréciées.""")
 
 
 client = OpenAI(api_key=st.session_state.openai_api_key)

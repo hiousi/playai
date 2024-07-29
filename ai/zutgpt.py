@@ -1,6 +1,5 @@
 """
     une app pour chatter avec chatGPT
-    tutorial from https://www.kdnuggets.com/beginners-guide-to-building-llm-apps-with-python
 
 """
 
