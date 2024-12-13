@@ -6,15 +6,24 @@
 import streamlit as st
 from openai import OpenAI
 
+from ai.config import settings_page
 
+from ai.config import settings_page
 
 
 # Setting the title of the Streamlit application
 st.title("💬 zutGPT")
 
-
-   
 st.write("Je suis plus fort qu'un chat. D'une intelligente à décorner les boeufs, je flatule de vrais réponses sur la vraie vie.")
+
+
+
+if not st.session_state.openai_api_key.startswith('sk-'):
+    st.warning(f"Tu as besoin d'une clef API OpenAI !", icon='⚠')
+    st.page_link(settings_page, label="SVP configure ta clef dans la page ⚙️ Settings")
+    st.stop()  # This stops further execution of the script
+
+
 
 client = OpenAI(api_key=st.session_state.openai_api_key)
 

@@ -1,14 +1,25 @@
 import streamlit as st
+import ai.config as config
 
-# Creating a sidebar input widget for the OpenAI API key, input type is password for security
-with st.sidebar:
-    st.session_state.openai_api_key = st.text_input('API Key', type='password')
-    "[créer une clef API](https://platform.openai.com/account/api-keys)"
+# session values 
+if "openai_api_key" not in st.session_state:
+    st.session_state.openai_api_key = ""
 
-pg = st.navigation([
-       st.Page("ai/zutgpt.py", title="chat avec zutGPT", icon=":material/chat:"),
-       st.Page("ai/flemai.py",  title="email avec FlemAI", icon=":material/mail:")
-    ])
+if "openai_model" not in st.session_state:
+    st.session_state.openai_model= config.OPENAI_MODEL
+
+if "openai_temperature" not in st.session_state:
+    st.session_state.openai_temperature = config.OPENAI_TEMPERATURE
+
+if "tontub_max_comments" not in st.session_state:
+    st.session_state.tontub_max_comments = config.TONTUB_MAX_COMMENTS
+
+
+
+pg = st.navigation({
+    "Apps": config.main_pages,
+    "Admin" : [config.settings_page]
+
+}) 
 pg.run()
-
 
