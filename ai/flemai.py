@@ -51,7 +51,7 @@ if gen:
                                 messages=[ {"role": "system", "content": "formule une réponse brève et utile à l'email, tu signe Pierre et montre toi très sympathique, attentionné, serviable et courtoi. tutoiement"},
                                            {"role": "user", "content": f"subject: {subject}\n  {body}" }  ],  
                                 model=st.session_state["openai_model"], 
-                                temperature=st.session_state["temperature"],
+                                temperature=st.session_state.openai_temperature,
                                 stream=True
             )
     response = st.write_stream(stream)
