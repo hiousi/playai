@@ -8,9 +8,6 @@ from openai import OpenAI
 
 from ai.config import settings_page
 
-from ai.config import settings_page
-
-
 # Setting the title of the Streamlit application
 st.title("💬 zutGPT")
 
