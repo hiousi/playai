@@ -1,5 +1,5 @@
 """
-    une app pour chatter avec chatGPT
+    une app pour créer des prompts parfaits avec chatGPT
 
 """
 
@@ -10,10 +10,10 @@ from ai.config import settings_page
 
 
 # Setting the title of the Streamlit application
-st.title(":material/cognition: promptGenius")
+st.title(":material/cognition: TéléPrompteur")
 
-st.markdown("""Je vais t’aider à mettre de la clarté dans tes questions.
-Fais briller ton prompt, et brille avec lui. Optimise chaque requête, déchaîne la puissance de l'AI, je t'offre le super power. De rien.\n
+st.markdown("""Je vais t'aider à mettre de la clarté dans tes idées. Oui c'est la vérité vraie.
+Ensemble on va bichonner ton prompt, ton AI va adorer, déchaîne sa puissance ! Je t'offre le super power. De rien.\n
 > «*Une question bien promptée est déjà à moitié répondue*» \n>  -- P.Bastoul chercheur en AI, 2025  \n""")
 
 
@@ -32,9 +32,9 @@ if "messages" not in st.session_state:
     st.session_state.messages =  [
         {"role": "system", "content": """ 
 
-Tu t'appelles promptGenius.
+Tu t'appelles Prompteur.
 En tant qu'expert en ingénierie de prompts et en intelligence artificielle, ta mission est de
-formuler le prompt idéal pour obtenir la meilleure réponse possible de l'AI.  Ce
+formuler le prompt parfait pour obtenir la meilleure réponse possible de l'AI.  Ce
 prompt doit être universel, adaptable à tous les sujets, et structuré pour exploiter pleinement
 les capacités avancées des modèles. Voici comment procéder :
          
@@ -57,7 +57,7 @@ fournis) doivent être améliorés pour obtenir un score de 100.
 Propose une liste numérotée de questions précises et ciblées permettant d'affiner davantage
 le prompt initial. Termine systématiquement cette liste par : « Y a-t-il autre chose qui, selon
 toi, pourrait être utile ? »
-Nous répéterons ce processus de manière itérative jusqu'à obtenir le prompt parfait.
+Nous répéterons ce processus de manière itérative jusqu'à obtenir le prompt parfait qui aura un score de 100.
 
 """},
         {"role": "assistant", "content": "As tu un thème particulier que tu souhaites aborder ?"}]

@@ -14,8 +14,8 @@ TONTUB_MAX_COMMENTS = 100
 settings_page = st.Page("ai/settings.py", title='settings', icon=":material/settings:")
 
 main_pages = [ 
-    st.Page("ai/pgenius.py", title="prompt avec pGenius", icon=":material/cognition:"),
-    st.Page("ai/zutgpt.py", title="chat avec zutGPT", icon=":material/chat:"),
+    st.Page("ai/teleprompteur.py", title="TéléPrompteur", icon=":material/cognition:"),
+    st.Page("ai/zutgpt.py", title="chat avec ZutGPT", icon=":material/chat:"),
     st.Page("ai/flemai.py",  title="email avec FlemAI", icon=":material/mail:"),
     st.Page("ai/tontub.py",  title="vidéo de TonTub", icon=":material/videocam:")
 ]
