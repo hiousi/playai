@@ -59,7 +59,8 @@ with tab2:
     model_option = st.selectbox(
         'Choisir un modèle OpenAI',
         config.OPENAI_MODEL_OPTIONS,
-        config.OPENAI_MODEL_OPTIONS.index(current_model) if current_model in config.OPENAI_MODEL_OPTIONS else 0
+        config.OPENAI_MODEL_OPTIONS.index(current_model) if current_model in config.OPENAI_MODEL_OPTIONS else 0,
+        help="Choisir un modèle OpenAI : https://platform.openai.com/docs/models/compare",
     )
     if model_option:
         st.session_state['openai_model'] = model_option

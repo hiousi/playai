@@ -3,7 +3,7 @@ import streamlit as st
 
 
 
-OPENAI_MODEL_OPTIONS = ['gpt-4.1-mini', 'gpt-4.1', 'o1-mini','o1','o3-mini']
+OPENAI_MODEL_OPTIONS = ['gpt-4.1-mini', 'gpt-4.1', 'gpt-4.5', 'o1-mini', 'o1', 'o3-mini']
 OPENAI_MODEL = 'gpt-4.1-mini'
 OPENAI_TEMPERATURE = 0.7
 
